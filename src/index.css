@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@theme {
+  --color-soft-white: #FAFBFF;
+  --color-light-gold: #F5EFE0;
+  --color-accent-gold: #D1C6A8;
+  --color-soft-black: #2A2A2A;
+  --color-soft-gray: #888888;
+  
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-soft-white text-soft-black font-sans selection:bg-light-gold;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-serif tracking-tight;
+  }
+}
+
+.glass-card {
+  @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-sm rounded-2xl;
+}
+
+.btn-gold {
+  @apply px-6 py-2 border border-accent-gold rounded-lg text-soft-black transition-all hover:bg-accent-gold/20 active:scale-95;
+}
+
+.btn-gold-fill {
+  @apply px-6 py-2 bg-accent-gold text-white rounded-lg transition-all hover:bg-accent-gold/90 active:scale-95;
+}
